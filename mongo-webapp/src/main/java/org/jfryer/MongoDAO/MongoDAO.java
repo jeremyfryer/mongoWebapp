@@ -9,7 +9,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 
 public class MongoDAO {
-	private static final String MONGOHOST = "192.168.1.108";
+	private static final String MONGOHOST = "mongodb";
 	private static final int MONGOPORT = 27017;
 	private static final String MONGODB = "school";
 	private static final String MONGOCOLLECTION = "students";
