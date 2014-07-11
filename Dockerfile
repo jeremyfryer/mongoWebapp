@@ -1,9 +1,9 @@
-FROM jfryer/orhel_jboss:new
+FROM 192.168.1.108:5000/centos7-jboss
 
-ADD ./app /usr/src
+ADD ./mongo-webapp /usr/src
 ADD ./standalone.xml /usr/local/EAP-6.2.0/jboss-eap-6.2/standalone/configuration/standalone.xml
 ENV JAVA_HOME /usr/java/default
-ENV M2_HOME /usr/maven/default
+ENV M2_HOME /usr/local/maven/default
 
 RUN $M2_HOME/bin/mvn clean install -f /usr/src/pom.xml
 
